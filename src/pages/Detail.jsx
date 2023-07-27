@@ -19,6 +19,7 @@ export default function Detail () {
   const userInfo = useSelector((state) => state.authUser?.userById)
   const geoLocation = JSON.parse(localStorage.getItem('geo'))
   const userID = localStorage.getItem('userId')
+  const props = { product, userID }
   const lat = parseFloat(geoLocation.lat)
   const lon = parseFloat(geoLocation.lon)
   const dispatch = useDispatch()
@@ -106,9 +107,9 @@ export default function Detail () {
             </div>
 
           </div>
-          <Comments />
+          <Comments props={props} />
 
-           </>
+        </>
           ) : <Loading />}
     </>
   )

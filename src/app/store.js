@@ -6,6 +6,7 @@ import locationReducer from '../features/location/location'
 import subcategoriesReducer from '../features/subCategoriesSlice/subcategoriesSlice'
 import barrioReducer from '../features/pruebaBarrioSlice/pruebaBarrioSlice'
 import autenticacionReducer from '../features/AutenticationSlice/AutenticationSlice'
+import offerReducer from '../features/offers/offerSlice'
 import reputatacionReducer from '../features/reputacionSlice/reputacionSlice'
 
 export const store = configureStore({
@@ -16,7 +17,8 @@ export const store = configureStore({
     subcategories: subcategoriesReducer,
     barrio: barrioReducer,
     autenticacion: autenticacionReducer,
-    reputacion: reputatacionReducer,
-    location: locationReducer
+    location: locationReducer,
+    offer: offerReducer,
+    reputacion: reputatacionReducer
   }
 })

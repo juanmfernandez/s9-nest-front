@@ -25,15 +25,29 @@
 .foto-usuario{
     display: flex;
     align-items: center;
+    width: 200px;
+    justify-content: space-around;
+}
+
+.parrafo-usuario{
+    margin: 0px;
 }
 
 .circulo{
-    border: 1px  #FF4679 solid;
+    border: 1px transparent solid;
     border-radius: 100%;
     width: 40px;
     height: 40px;
     color: transparent;
 
+}
+
+.imagen-usuario{
+    border: 1px  transparent solid;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    color: transparent;
 }
 
 @media (min-width: 576px) {}

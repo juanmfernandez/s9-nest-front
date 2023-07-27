@@ -8,6 +8,7 @@ import '@fontsource/roboto/300.css'
 import '@fontsource/roboto/400.css'
 import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
+import Footer from '../src/components/Footer/Footer.jsx'
 
 // import './index.css'
 
@@ -20,6 +21,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <CssBaseline />
     <Provider store={store}>
       <App />
+      <Footer />
     </Provider>
   </React.StrictMode>
 )

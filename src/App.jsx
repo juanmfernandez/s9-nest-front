@@ -54,6 +54,7 @@ function App () {
           if (res.type === 'auth/processGoogleCallback/fulfilled') {
             localStorage.setItem('userId', res.payload.user._id)
             localStorage.setItem('token', res.payload.token)
+            localStorage.setItem('userImage', res.payload.user.picture)
           }
         })
         .catch(() => {

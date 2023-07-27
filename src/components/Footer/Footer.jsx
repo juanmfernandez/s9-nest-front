@@ -6,7 +6,7 @@ export default function App () {
   return (
     <MDBFooter bgColor='light' className='text-center text-lg-start text-muted' style={{ backgroundColor: 'rgb(201, 40, 126)' }}>      <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
       <div className='me-5 d-none d-lg-block'>
-        <span>Get connected with us on social networks:</span>
+        <span>Conectate con nuestras redes:</span>
       </div>
 
       <div>
@@ -29,7 +29,7 @@ export default function App () {
           <FaGithub />
         </a>
       </div>
-                                                                                                                                       </section>
+    </section>
 
       <section className=''>
         <MDBContainer className='text-center text-md-start mt-5'>

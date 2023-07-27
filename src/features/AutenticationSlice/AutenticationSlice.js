@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
-const API_URL = "http://24.199.107.36:3000/api/v1";
+const API_URL = 'http://localhost:3000/api/v1'
 
 export const loginWithGoogle = createAsyncThunk('auth/loginWithGoogle', async (_, thunkAPI) => {
   try {

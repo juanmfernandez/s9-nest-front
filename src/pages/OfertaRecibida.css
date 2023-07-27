@@ -15,7 +15,12 @@
    
 }
 
-
+.contactar-whatsapp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
 
 
 
@@ -40,6 +45,7 @@
     width: 120px;
     height: 120px;
     border: 1px solid black;
+    
 }
 
 .prod-titulo{
@@ -110,6 +116,13 @@
   }
 
 @media (min-width: 768px) {
+
+    .cards-container{
+        margin: 0px 30px;
+        border: 1px rgba(0, 0, 0, 0.233) solid;
+        padding: 5px;
+    }
+
     .ubicar{    
         display: flex;
         flex-wrap: wrap;
@@ -118,7 +131,7 @@
     } 
 
     .margin{
-        margin: 0px 20px;
+        margin: 0px 40px;
     }
 
 }

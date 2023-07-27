@@ -1,16 +1,13 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
-const API_URL =
-    "http://24.199.107.36:3000/api/v1/offers";
+const API_URL = 'http://localhost:3000/api/v1/offers'
 
 export const createOffer = createAsyncThunk('offers/create', async (args, thunkAPI) => {
   const { token, offer } = args
   try {
-    console.log(offer.offeredItems);
     const response = await fetch(`${API_URL}`, {
       method: 'POST',
       headers: {
-        Accept: 'application/json',
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`
       },
@@ -83,7 +80,7 @@ export const changeOfferStatus = createAsyncThunk('offers/changeOfferStatus', as
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`
       },
-      body: status
+      body: JSON.stringify(status)
     })
 
     if (!response.ok) {
@@ -143,7 +140,7 @@ const offerSlice = createSlice({
       .addCase(createOffer.fulfilled, (state, action) => {
         state.status = 'succeeded'
         state.loading = false
-        state.allOffers.push(action.payload)
+        // state.allOffers.push(action.payload)
         state.error = null
       })
 

@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import io from 'socket.io-client'
+import '../../pages/Detalle.css'
 
-const Comments = () => {
+const Comments = (props) => {
   const [messages, setMessages] = useState([])
   const [newMessage, setNewMessage] = useState({
     message: messages,
-    recipientId: '64beeb0bc42a2683b2bd9995',
-    senderId: '64bed4b3aef427b4e0f39919',
-    targetItemid: '64bf22a84026d0c9d64567bd'
+    recipientId: props.props.product.owner,
+    senderId: props.props.userID,
+    targetItemid: props.props.product._id
   })
 
   useEffect(() => {
-    const socket = io('http://24.199.107.36:8001')
+    const socket = io('http://localhost:8001')
 
     socket.on('message', (message) => {
       setMessages((prevMessages) => [...prevMessages, message])
@@ -24,32 +25,35 @@ const Comments = () => {
 
   const handleSendMessage = (e) => {
     e.preventDefault()
-    const socket = io('http://24.199.107.36:8001')
-    socket.emit('message', JSON.stringify(newMessage))
+    const socket = io('http://localhost:8001')
+    socket.emit('message', newMessage)
     setNewMessage({
       message: '',
-      recipientId: '64beeb0bc42a2683b2bd9995',
-      senderId: '64bed4b3aef427b4e0f39919',
-      targetItemid: '64bf22a84026d0c9d64567bd'
+      recipientId: props.props.product.owner,
+      senderId: props.props.userID,
+      targetItemid: props.props.product._id
     })
   }
 
   return (
-    <div>
+    <div className='comment-contenedor'>
       <h1>Chat de Comentarios</h1>
       <div>
         {messages.map((message, index) => (
-          <div key={index}>{message}</div>
+          <div key={index} className='comment-container'>
+            <div className='comment-text'>{message}</div>
+          </div>
         ))}
       </div>
       <form onSubmit={handleSendMessage}>
         <input
           type='text'
+          className='message-input'
           value={newMessage.message}
           onChange={(e) =>
             setNewMessage({ ...newMessage, message: e.target.value })}
         />
-        <button type='submit'>Enviar</button>
+        <button type='submit' className='button-Send'>Enviar</button>
       </form>
     </div>
   )
