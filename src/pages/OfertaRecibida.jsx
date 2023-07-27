@@ -6,7 +6,7 @@ import Swal from 'sweetalert2'
 import PerfilUsuario from './Perfil/PerfilUsuarioConsumeAgustinLorenzi'
 import { useDispatch, useSelector } from 'react-redux'
 import { changeOfferStatus, getOfferById } from '../features/offers/offerSlice'
-import CardOffer from '../components/cardOffers/cardOffer'
+import CardOffer from '../components/cardOffers/CardOffer'
 import { toast } from 'react-toastify'
 
 const OfertaRecibida = () => {
