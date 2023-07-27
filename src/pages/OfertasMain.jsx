@@ -6,7 +6,7 @@ import { getUserById } from '../features/authSlice/authSlice'
 import { Link, useParams } from 'react-router-dom'
 import { getOfferById } from '../features/offers/offerSlice'
 import CardProduct from '../components/CardProduct'
-import CardOffer from '../components/cardOffers/cardOffer'
+import CardOffer from '../components/cardOffers/CardOffer'
 
 function OfertasMain () {
 //   const userId = useSelector((state) => state?.authUser?.userById)
