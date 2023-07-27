@@ -7,11 +7,23 @@ import { toast } from 'react-toastify'
 import { logout } from '../../features/authSlice/authSlice'
 const SubmenuUser = () => {
   const token = useSelector(state => state?.autenticacion?.token)
-  const id = localStorage.getItem('userId')
   const [isActive, setIsActive] = useState(false)
 
   const dispatch = useDispatch()
   const navigate = useNavigate()
+
+  // const handleLogout = () => {
+  //   toast.success('Bie bie 👋😊!')
+  //   dispatch(logout(token))
+  //     .then((res) => {
+  //       console.log('LOGOUT -> ', res)
+  //     })
+  //     .catch((err) => {
+  //       console.log('ERROR LOGOUT -> ', err)
+  //     })
+  //   // dispatch(logoutUser())
+  //   navigate('/')
+  // }
 
   const handleLogout = async () => {
     toast.success('Bie bie 👋😊!')
@@ -35,10 +47,6 @@ const SubmenuUser = () => {
 
   const handleActiveSubmenu = () => {
     setIsActive(!isActive)
-  }
-
-  const handleIncomingOffer = () => {
-    navigate(`/ofertas/${id}`)
   }
 
   return (
@@ -65,7 +73,7 @@ const SubmenuUser = () => {
             <ion-icon name='bag-check-outline' />
             <span>Publicar articulo</span>
           </button>
-          <button className='botonSubmenu2' onClick={handleIncomingOffer}>
+          <button className='botonSubmenu2'>
             <ion-icon name='bag-check-outline' />
             <span>Mis ofertas</span>
           </button>

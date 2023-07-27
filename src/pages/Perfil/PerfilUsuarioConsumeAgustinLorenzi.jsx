@@ -14,17 +14,28 @@ import UserBannerStatistics from './UserBannerStatistics/UserBannerStatistics'
 import ReusableCarrusel from './ReusableCarrusel/ReusableCarrusel'
 import './PerfilUsuarioConsumeAgustinLorenzi.css'
 
-const PerfilUsuario = ({ usuario, geoInfo }) => {
+const PerfilUsuario = () => {
   const ubication = useSelector(state => state?.location)
   const barrio = useSelector(state => state?.barrio?.barrio)
   const productsYouLike = useSelector((state) => state?.productsDb?.likeProducts)
   const [calculaRep, setCalculaRep] = useState('')
   const dispatch = useDispatch()
   const lastUbication = useRef(null)
-  const image = localStorage.getItem('userImage')
+  // console.log('Ubicacion Anterior -->', lastUbication)
+  // console.log('Ubicacion Anterior -->', lastUbication)
 
   const reputacionUSer = { intercambiosExitosos: 15, intercambiosFallidos: 2, totalPublicaciones: 32, valoracionesPositivas: 15, valoracionesNegativas: 2, devoluciones: 1 }
 
+  // const objeto = {
+  //   _id: '64aba27c2415d442b78559c1',
+  //   img: 'https://res.cloudinary.com/dpiwmbsog/image/upload/v1686264426/PERFIL_GENERAL_hbngdm.jpg',
+  //   email: 'guillermoneculqueo@gmail.com',
+  //   password: '@Guille123',
+  //   firstName: 'guillermo agustin',
+  //   lastName: 'neculqueo',
+  //   contact: '2944396887',
+  //   address: 'argentina, rio negro, ingeniero jcobacci'
+  // }
   const objeto = {
     _id: '64b9bb6d821dd7fe3cb11333',
     email: 'pescadorabioso1992@gmail.com',
@@ -65,13 +76,13 @@ const PerfilUsuario = ({ usuario, geoInfo }) => {
           {/* head perfil */}
           {/* <CardMiniPerfil usuario={objeto} barrio={barrio} /> */}
           <div className='foto-usuario'>
-            <span className='circulo'>     <img src='' alt='' />    </span>
-            <p>{usuario?.firstName} {usuario?.lastName}</p>
+            <span className='circulo'>     foto     </span>
+            <p>Pedro Sanchez.</p>
 
           </div>
 
           <br />
-          {/* <p>{geoInfo?.map((prod, i) => (<div key={i}>{prod.location}</div>))}</p> */}
+          <p>Ubicación</p>
 
           {/* Estrellas valoracion */}
           <Stars number={calculaRep} />
@@ -88,6 +99,7 @@ const PerfilUsuario = ({ usuario, geoInfo }) => {
           </Link>
         </section>
       </div>
+
 
     </div>
   )

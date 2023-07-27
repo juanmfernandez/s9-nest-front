@@ -17,9 +17,7 @@ import SettingPerfil from '../pages/SettingPerfil/SettingPerfil'
 import OfertaRecibida from '../pages/OfertaRecibida'
 import OfertaAceptada from '../pages/OfertaAceptada'
 import Callificacion from '../pages/Callificacion/Callificacion'
-import OfertasMain from '../pages/OfertasMain'
 import CalificacionesRecibidas from '../pages/CalificacionesRecibidas/CalificacionesRecibidas'
-
 
 function AppRouter ({ state }) {
   return (
@@ -27,9 +25,8 @@ function AppRouter ({ state }) {
       <NavBarBootstrap />
       <Routes>
         <Route path='/login' element={<Login />} />
-        <Route path='/ofertas/:id' element={<OfertasMain />} />
-        <Route path='/oferta-recibida/:offerId' element={<OfertaRecibida />} />
-        <Route path='/oferta-aceptada/:offerOwnerId' element={<OfertaAceptada />} />
+        <Route path='/oferta-recibida' element={<OfertaRecibida />} />
+        <Route path='/oferta-aceptada' element={<OfertaAceptada />} />
         <Route path='/register' element={<Register />} />
         <Route path='/' element={<Home />} />
         <Route path='/detalle/:id/:owner' element={<Detail />} />

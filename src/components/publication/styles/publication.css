@@ -11,7 +11,7 @@
     flex-direction: column;
 }
 
-.publication-container .title-container{
+.title-container{
     width: 300px;
     display: flex;
     justify-content: center;
@@ -19,7 +19,7 @@
     margin-bottom: 3px;
 }
 
-.publication-container .title-container p{
+.title-container p{
     margin-bottom: 0;
     color: #000;
     text-align: center;
@@ -31,7 +31,7 @@
     letter-spacing: 0.111px;
 }
 
-.publication-container .custom-container{
+.custom-container{
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
@@ -39,7 +39,7 @@
     min-width: 280px;
 }
 
-.publication-container .input-title{
+.input-title{
     margin-bottom: 0;
     color: #000;
     text-align: center;
@@ -51,7 +51,7 @@
     letter-spacing: 0.111px;
 }
 
-.publication-container .upload-title{
+.upload-title{
     display: flex;
     min-width: 280px;
 }
@@ -63,7 +63,7 @@
     width: 100%;
 } */
 
-.publication-container .title-carousel{
+.title-carousel{
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
@@ -72,7 +72,7 @@
     overflow: hidden;
 }
 
-.publication-container .carousel-div{
+.carousel-div{
     display: flex;
     /* position: relative; */
     /* max-width: 300px;
@@ -87,13 +87,13 @@
 }
 
 
-.publication-container .input-container{
+.input-container{
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-.publication-container .location-container{
+.location-container{
     display: flex;
     flex-wrap: wrap;
     min-width: 280px;
@@ -103,7 +103,7 @@
     gap: 8px;
 }
 
-.publication-container .label-input{
+.label-input{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,7 +128,7 @@
     display: none;
 }
 
-.publication-container .submit-button-p{
+.submit-button-p{
     display: flex;
     width: 211px;
     height: 45px;
@@ -150,7 +150,7 @@
     letter-spacing: 0.111px;
 }
 
-.publication-container .alerts-container{
+.alerts-container{
     background-color: rgba(0, 0, 0, 0.23);
     position: fixed;
     width: 100%;
@@ -163,7 +163,7 @@
 }
 
 @media (max-width: 765px){
-    .publication-container .custom-container{
+    .custom-container{
         max-width: 396px;
     }
 }

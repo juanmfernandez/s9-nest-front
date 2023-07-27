@@ -1,7 +1,8 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { GoogleMap, Marker, Circle, InfoWindow } from '@react-google-maps/api'
 
-function MapView ({ longitude, latitude }) {
+function MapView({ longitude, latitude }) {
   // const location = useSelector(state => state.location)
 
   const mapContainerStyle = {
