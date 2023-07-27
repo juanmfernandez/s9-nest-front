@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
-const API_URL = "https://somber-cover-production.up.railway.app/api/v1";
+const API_URL = "http://24.199.107.36:3000/api/v1";
 
 export const loginWithGoogle = createAsyncThunk('auth/loginWithGoogle', async (_, thunkAPI) => {
   try {

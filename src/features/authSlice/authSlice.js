@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 const API_URL =
-    "https://somber-cover-production.up.railway.app/api/v1/users";
+    "http://24.199.107.36:3000/api/v1/users";
 
 // creamos un usuario
 export const createUser = createAsyncThunk('authUser/register', async (user, thunkAPI) => {
