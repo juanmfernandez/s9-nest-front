@@ -11,7 +11,7 @@ const Comments = () => {
   })
 
   useEffect(() => {
-    const socket = io('http://localhost:8001')
+    const socket = io('https://somber-cover-production.up.railway.app:8001')
 
     socket.on('message', (message) => {
       setMessages((prevMessages) => [...prevMessages, message])
@@ -24,7 +24,7 @@ const Comments = () => {
 
   const handleSendMessage = (e) => {
     e.preventDefault()
-    const socket = io('http://localhost:8001')
+    const socket = io('https://somber-cover-production.up.railway.app:8001')
     socket.emit('message', JSON.stringify(newMessage))
     setNewMessage({
       message: '',

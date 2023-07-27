@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 const API_URL =
-    "https://trueka-nocountry-production.up.railway.app/api/v1/offers";
+    "https://somber-cover-production.up.railway.app/api/v1/offers";
 
 export const createOffer = createAsyncThunk('offers/create', async (args, thunkAPI) => {
   const { token, offer } = args
