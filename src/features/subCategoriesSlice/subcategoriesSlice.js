@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
-const API_URL = 'http://localhost:3000/api/v1/subcategories'
+const API_URL = 'https://backendrestfullseleccionado.online/api/v1/subcategories'
 
 export const createSubcategories = createAsyncThunk('subcategories/post', async (args, thunkAPI) => {
   const { token, category } = args
