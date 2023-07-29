@@ -12,7 +12,7 @@ const Comments = (props) => {
   })
 
   useEffect(() => {
-    const socket = io('http://localhost:8001')
+    const socket = io('https://backendrestfullseleccionado.online:3001')
 
     socket.on('message', (message) => {
       setMessages((prevMessages) => [...prevMessages, message])
@@ -25,7 +25,7 @@ const Comments = (props) => {
 
   const handleSendMessage = (e) => {
     e.preventDefault()
-    const socket = io('http://localhost:8001')
+    const socket = io('https://backendrestfullseleccionado.online:3001')
     socket.emit('message', newMessage)
     setNewMessage({
       message: '',
