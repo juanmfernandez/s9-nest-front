@@ -7,7 +7,7 @@ const initialValues = {
   password: ''
 }
 
-function Login() {
+function Login () {
   const [state, setState] = useState(initialValues)
   const [errors, setErrors] = useState({})
 
@@ -20,7 +20,7 @@ function Login() {
   }
 
   const handleGoogleLogin = () => {
-    window.location.href = 'https://backendrestfullseleccionado.online/api/v1/google'
+    window.location.href = 'http://localhost:3000/api/v1/google'
   }
 
   return (
@@ -46,10 +46,9 @@ function Login() {
               type='password'
               onChange={handleChange}
               className='contraseña'
-              
+
             />
-            
-            
+
           </div>
           <div className='forgot-pass'>
             <Link to='/login' className='olvide'>Olvidé mi contraseña</Link>
@@ -58,9 +57,7 @@ function Login() {
             className='button'
           >Iniciar Sesión
           </button>
-          
-            
-       
+
           <div className='new-account'>
             <span className='mt-2 no-cuenta'>
               ¿No tenés una cuenta?
@@ -71,10 +68,10 @@ function Login() {
               Crear cuenta
             </Link>
           </div>
-         
+
           <hr className='hr' />
-          <br/>
-          <br/>
+          <br />
+          <br />
           <div className='login-alternatives'>
             <p className='ingresar-con'>Ingresar con</p>
             <div className='google-facebook'>

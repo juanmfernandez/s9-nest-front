@@ -1,7 +1,6 @@
-import { Link } from 'react-router-dom'
 import LocationSVG from '../LocationSVG'
 import LocationSVGMobile from '../LocationSVGMobile'
-import '../cardOffers/cardOffer.css'
+import './cardOffer.css'
 
 function CardOffer ({ products }) {
   return (

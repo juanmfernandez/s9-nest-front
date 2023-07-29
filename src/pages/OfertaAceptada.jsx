@@ -2,9 +2,6 @@ import React, { useEffect } from 'react'
 import './OfertaAceptada.css'
 // import PerfilUser from './Perfil/PerfilUsuarioConsumeAgustinLorenzi'
 import { Link, useParams } from 'react-router-dom'
-import PerfilUser from './Perfil/PerfilUser'
-import SettingPerfil from './SettingPerfil/SettingPerfil'
-import CardMiniPerfil from './Perfil/CardMiniPerfil/CardMiniPerfil'
 import PerfilUsuario from './Perfil/PerfilUsuarioConsumeAgustinLorenzi'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUserById } from '../features/authSlice/authSlice'
@@ -48,15 +45,15 @@ const OfertaAceptada = () => {
         </Link>
 
       </div>
+      <div className='botones'>
+        <Link to='/calificar'><button className='ofertar'>Calificar usuario</button></Link>
+
+      </div>
+
       {/* <div className='botones'>
-                <Link to='/calificar'><button className='ofertar' >Calificar usuario</button></Link>
+        <button className='ofertar2'>Reportar usuario</button>
 
-            </div>
-
-            <div className='botones'>
-                <button className='ofertar2'>Reportar usuario</button>
-
-            </div> */}
+      </div> */}
     </div>
   )
 }

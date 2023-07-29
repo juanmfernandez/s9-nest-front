@@ -20,7 +20,6 @@ import Callificacion from '../pages/Callificacion/Callificacion'
 import OfertasMain from '../pages/OfertasMain'
 import CalificacionesRecibidas from '../pages/CalificacionesRecibidas/CalificacionesRecibidas'
 
-
 function AppRouter ({ state }) {
   return (
     <BrowserRouter>

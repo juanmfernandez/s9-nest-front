@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
-const API_URL = 'https://backendrestfullseleccionado.online/api/v1'
+const API_URL = 'http://localhost:3000/api/v1'
 
 export const loginWithGoogle = createAsyncThunk('auth/loginWithGoogle', async (_, thunkAPI) => {
   try {
@@ -74,17 +74,37 @@ export const login = createAsyncThunk(
   }
 )
 
+const DEFAULTSTATE = {
+  user: null,
+  loading: false,
+  error: null,
+  token: null,
+  isAuthenticated: false,
+  isLoggedIn: false,
+  isAdmin: false
+}
+
+// const user = (() => {
+//   const persisteState = localStorage.getItem('autentication_storage')
+//   if (persisteState) {
+//     return JSON.parse(persisteState).user
+//   }
+//   return DEFAULTSTATE.user
+// })()
+
+const initialState = {
+  user: null,
+  loading: false,
+  error: null,
+  token: null,
+  isAuthenticated: false,
+  isLoggedIn: false,
+  isAdmin: false
+}
+
 const AutenticationSlice = createSlice({
   name: 'authentication',
-  initialState: {
-    user: null,
-    loading: false,
-    error: null,
-    token: null,
-    isAuthenticated: false,
-    isLoggedIn: false,
-    isAdmin: false
-  },
+  initialState,
   reducers: {
     storeAccessToken: (state, action) => {
       state.token = action.payload
@@ -97,7 +117,6 @@ const AutenticationSlice = createSlice({
       state.token = null
       state.isAdmin = false
     }
-
   },
   extraReducers: (builder) => {
     builder
