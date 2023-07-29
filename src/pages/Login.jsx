@@ -20,7 +20,7 @@ function Login () {
   }
 
   const handleGoogleLogin = () => {
-    window.location.href = 'http://backendrestfullseleccionado.online/api/v1/google'
+    window.location.href = 'https://backendrestfullseleccionado.online/api/v1/google'
   }
 
   return (
