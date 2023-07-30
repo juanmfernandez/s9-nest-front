@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import './OfertaAceptada.css'
 // import PerfilUser from './Perfil/PerfilUsuarioConsumeAgustinLorenzi'
 import { Link, useParams } from 'react-router-dom'
-import PerfilUsuario from './Perfil/PerfilUsuarioConsumeAgustinLorenzi'
+import PerfilUsuario from './Perfil/PerfilUsuarioConsumer'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUserById } from '../features/authSlice/authSlice'
 

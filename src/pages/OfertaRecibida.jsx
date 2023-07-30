@@ -3,7 +3,7 @@ import './OfertaRecibida.css'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 // import PerfilUsuario from './Perfil/PerfilUsuarioConsumeAgustinLorenzi';
 import Swal from 'sweetalert2'
-import PerfilUsuario from './Perfil/PerfilUsuarioConsumeAgustinLorenzi'
+import PerfilUsuario from './Perfil/PerfilUsuarioConsumer'
 import { useDispatch, useSelector } from 'react-redux'
 import { changeOfferStatus, getOfferById } from '../features/offers/offerSlice'
 import CardOffer from '../components/cardOffers/CardOffer'
